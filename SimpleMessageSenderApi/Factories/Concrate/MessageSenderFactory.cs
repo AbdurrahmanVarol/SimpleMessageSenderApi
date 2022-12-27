@@ -12,7 +12,7 @@ namespace SimpleMessageSenderApi.Factories.Concrate
             return messageType switch
             {
                 MessageSenderType.Sms => new SmsSender(),
-                MessageSenderType.Email => new SmsSender(),
+                MessageSenderType.Email => new EmailSender(),
                 _ => throw new NotImplementedException(nameof(messageType))
             };
         }
